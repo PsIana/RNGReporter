@@ -2523,11 +2523,11 @@ namespace RNGReporter
                 ((filter.spdValue >= 30) &&
                  (filter.spdCompare == CompareType.Equal || filter.spdCompare == CompareType.GtEqual)))
             {
-                // physical spreads must have Attack >=30 and flawless speed (either for standard or Trick Room)
+                // physical spreads must have Attack >=30 and aTTACK >=30 (either for standard or Trick Room)
                 if ((filter.atkValue >= 30) &&
                     (filter.atkCompare == CompareType.Equal || filter.atkCompare == CompareType.GtEqual))
                 {
-                    if ((filter.speValue == 31) &&
+                    if ((filter.speValue >= 30) &&
                         (filter.speCompare == CompareType.Equal || filter.speCompare == CompareType.GtEqual))
                         return true;
 
@@ -2544,7 +2544,7 @@ namespace RNGReporter
                 if ((filter.spaValue >= 30) &&
                     (filter.spaCompare == CompareType.Equal || filter.spaCompare == CompareType.GtEqual))
                 {
-                    if ((filter.speValue == 31) &&
+                    if ((filter.speValue >= 30) &&
                         (filter.speCompare == CompareType.Equal || filter.speCompare == CompareType.GtEqual))
                         return true;
 
